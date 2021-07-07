@@ -11,7 +11,7 @@ cd _output
 
 gpb template --make-paths-absolute --mb basic.mb config.json run.mb
 
-for i in prep-gp.sh fit.sh direct.sh outside.sh; do
+for i in prep-gp.sh fit.sh outside.sh; do
     gpb template --make-paths-absolute --mb $i config.json $i
 done
 
