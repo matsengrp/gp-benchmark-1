@@ -18,6 +18,6 @@ done
 #mb run.mb | tee mb.log
 bash prep-gp.sh
 bash fit.sh | tee fit.log
-bash outside.sh | tee outside.log
+# bash outside.sh | tee outside.log
 
 touch 0sentinel
