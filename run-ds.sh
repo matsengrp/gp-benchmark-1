@@ -52,7 +52,7 @@ declare -i count=0
 while [ $count -lt $NTREES ]; do
 	nograd_surf=_nograd_output/gp.$count.perpcsp_llh_surface.csv
 	nograd_track=_nograd_output/gp.$count.tracked_bl_correction.csv
-	grad_surf=_grad_output/gp.$count.perpcsp_llh_surface.csv
+	grad_surf=_nograd_output/gp.$count.perpcsp_llh_surface.csv # it should be the same as nograd_surf
 	grad_track=_grad_output/gp.$count.tracked_bl_correction.csv
 	out_path=_single_tree_plots/$count.perpcsp_plot.pdf
 	gpb pcsptrackplot $nograd_surf $nograd_track $grad_surf $grad_track $out_path
