@@ -16,16 +16,19 @@ cd _nograd_output
 
 gpb template --make-paths-absolute --mb basic.mb config.json run.mb
 
-for i in prep-gp.sh prep-gp-singletree.sh fit.sh outside.sh single-tree-fit.sh; do
+for i in prep-gp.sh prep-gp-mltree.sh fit.sh outside.sh ml-tree-fit.sh; do
     gpb template --make-paths-absolute --mb $i config.json $i
 done
 
 #mb run.mb | tee mb.log
 bash prep-gp.sh
-bash prep-gp-singletree.sh
-declare -i NTREES=3 #$(wc -l < rerooted-topologies.noburnin.nonsingletons.nwk)
+bash prep-gp-mltree.sh
+
+# Below is code for single tree
+# declare -i NTREES=3 #$(wc -l < rerooted-topologies.noburnin.nonmltons.nwk)
+
 # bash fit.sh | tee fit.log
-bash single-tree-fit.sh | tee single-tree-fit.log
+bash ml-tree-fit.sh | tee ml-tree-fit.log
 # bash outside.sh | tee outside.log
 
 # Now with gradients
@@ -33,30 +36,26 @@ cd ../_grad_output
 
 gpb template --make-paths-absolute --mb basic.mb config.json run.mb
 
-for i in prep-gp.sh prep-gp-singletree.sh fit.sh outside.sh single-tree-fit.sh; do
+for i in prep-gp.sh prep-gp-mltree.sh fit.sh outside.sh ml-tree-fit.sh; do
     gpb template --make-paths-absolute --mb $i config.json $i
 done
 
 #mb run.mb | tee mb.log
 bash prep-gp.sh
-bash prep-gp-singletree.sh
+bash prep-gp-mltree.sh
 # bash fit.sh | tee fit.log
-bash single-tree-fit.sh | tee single-tree-fit.log
+bash ml-tree-fit.sh | tee ml-tree-fit.log
 # bash outside.sh | tee outside.log
 
 cd ..
-rm -rf _single_tree_plots
-mkdir _single_tree_plots
+rm -rf _ml_tree_plots
+mkdir _ml_tree_plots
 
-declare -i count=0
-while [ $count -lt $NTREES ]; do
-	nograd_surf=_nograd_output/gp.$count.perpcsp_llh_surface.csv
-	nograd_track=_nograd_output/gp.$count.tracked_bl_correction.csv
-	grad_surf=_nograd_output/gp.$count.perpcsp_llh_surface.csv # it should be the same as nograd_surf
-	grad_track=_grad_output/gp.$count.tracked_bl_correction.csv
-	out_path=_single_tree_plots/$count.perpcsp_plot.pdf
-	gpb pcsptrackplot $nograd_surf $nograd_track $grad_surf $grad_track $out_path
-	count+=1
-done
+nograd_surf=_nograd_output/gp.ml.perpcsp_llh_surface.csv
+nograd_track=_nograd_output/gp.ml.tracked_bl_correction.csv
+grad_surf=_nograd_output/gp.ml.perpcsp_llh_surface.csv # it should be the same as nograd_surf
+grad_track=_grad_output/gp.ml.tracked_bl_correction.csv
+out_path=_ml_tree_plots/ml.perpcsp_plot.pdf
+gpb pcsptrackplot $nograd_surf $nograd_track $grad_surf $grad_track $out_path
 
 touch 0sentinel
