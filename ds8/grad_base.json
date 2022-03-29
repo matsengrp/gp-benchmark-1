@@ -1,6 +1,7 @@
 {
-    "ds_number": 8,
-    "reroot_number": 15,
-    "reroot_name": "Latimeria_chalumnae",
-    "use_gradients": 1
+  "ds_number": 8,
+  "reroot_number": 4,
+  "reroot_name": "Ceratocystis_fimbriata",
+  "use_gradients": 1,
+  "per_pcsp_convg": 0
 }

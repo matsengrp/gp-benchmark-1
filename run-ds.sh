@@ -9,6 +9,10 @@ cp -r _output _nograd_output
 cp -r _output _grad_output
 rm -f _output/0sentinel
 
+# appending nograd_base.json with objects for per pcsp convergence
+jq '. +{"use_gradients":0, "per_pcsp_convg":0}' base.json >nograd_base.json
+jq '. +{"use_gradients":1, "per_pcsp_convg":0}' base.json >grad_base.json
+
 gpb template config.json nograd_base.json _nograd_output/config.json
 gpb template config.json grad_base.json _grad_output/config.json
 

@@ -1,6 +1,7 @@
 {
-    "ds_number": 1,
-    "reroot_number": 15,
-    "reroot_name": "Latimeria_chalumnae",
-    "use_gradients": 1
+  "ds_number": 1,
+  "reroot_number": 15,
+  "reroot_name": "Latimeria_chalumnae",
+  "use_gradients": 1,
+  "per_pcsp_convg": 1
 }
