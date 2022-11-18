@@ -9,7 +9,7 @@ mkdir -p $AGGOUTPATH
 
 for i in ds1 ds[3-8]; do
     (cd ../$i && bash $BASE/run-ds-benchmark-golden.sh $i)
-    cp $i/$DSOUTPATH/$i.bench* $AGGOUTPATH/.
+    cp ../$i/$DSOUTPATH/$i.bench* $AGGOUTPATH/.
 done
 
 conda run -n bito gpb coverage $AGGOUTPATH
