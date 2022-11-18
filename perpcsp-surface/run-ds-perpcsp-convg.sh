@@ -10,8 +10,8 @@ cp -r _output _perpcspllh_output
 rm -f _output/0sentinel
 
 # appending base.json with objects for per pcsp convergence
-jq '. +{"use_gradients":0, "per_pcsp_convg":0}' base.json >fullhybridllh.json
-jq '. +{"use_gradients":1, "per_pcsp_convg":1}' base.json >perpcspllh.json
+jq '. +{"use_gradients":0, "per_pcsp_convg":0, "hotstart":0, "steps":0}' base.json >fullhybridllh.json
+jq '. +{"use_gradients":1, "per_pcsp_convg":0, "hotstart":0, "steps":0}' base.json >perpcspllh.json
 
 gpb template config.json fullhybridllh.json _fullhybridllh_output/config.json
 gpb template config.json perpcspllh.json _perpcspllh_output/config.json
