@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 DS=$1
-GOLDENRUNPATH=/fh/fast/matsen_e/shared/vip/ds-golden/$DS/_exp_output
+GOLDENRUNPATH=/fh/fast/matsen_e/shared/vip/ds-golden/$DS/_output
 OUTPATH=_golden_benchmark_output
 
 rm -rf $OUTPATH; mkdir $OUTPATH; cp $GOLDENRUNPATH/$DS.t $OUTPATH/.
