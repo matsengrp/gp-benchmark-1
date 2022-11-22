@@ -4,3 +4,10 @@
 __pycache__/
 _ignore*
 _output
+
+# benchmark results
+correlation.csv
+benchmark/*_results/*
+benchmark/batch_log.out
+ds*/*_output/*
+ds*/benchmark.json

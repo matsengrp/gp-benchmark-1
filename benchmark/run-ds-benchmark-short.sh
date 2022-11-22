@@ -11,7 +11,7 @@ rm -rf $OUTPATH; cp -r _output $OUTPATH
 rm -f _$OUTPATH/0sentinel
 
 # appending base.json with objects for per pcsp convergence
-jq '. +{"use_gradients":0, "intermediate":0, "hotstart":0, "steps":0}' base.json >benchmark.json
+jq '. +{"use_gradients":0, "intermediate":0, "hotstart":0, "steps":0, "benchmark_iters":1}' base.json >benchmark.json
 
 gpb template config.json benchmark.json $OUTPATH/config.json
 
