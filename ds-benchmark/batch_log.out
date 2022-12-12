@@ -1,0 +1,11 @@
+++ pwd
++ BASE=/home/hnasif/matsen/gp-benchmark-1/benchmark
++ DSOUTPATH=_golden_benchmark_output
++ AGGOUTPATH=_golden_benchmark_results
++ rm -rf _golden_benchmark_results
++ mkdir -p _golden_benchmark_results
++ cp -r vbpi_exp _golden_benchmark_results/vbpi
++ for i in ds1 ds3 ds4 ds5 ds6 ds7 ds8
++ cd ../ds1
++ bash /home/hnasif/matsen/gp-benchmark-1/benchmark/run-ds-benchmark-golden.sh ds1
+slurmstepd-gizmok13: error: *** JOB 5558303 ON gizmok13 CANCELLED AT 2022-12-12T00:01:49 ***
