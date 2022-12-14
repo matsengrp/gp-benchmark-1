@@ -10,7 +10,7 @@
   - To run benchmark on all datasets through slurm job: `sbatch sbatch-run-all-golden.sh`
 - Results are outputted to: `ds-benchmark/_golden_benchmark-results/`
 ### Run Makona
-- The makona estimation script is located in `makona/`
+- The makona estimation script is located in `makona-benchmark/`
   - To run the makona script: `conda activate bito && bash run-makona.sh`
   - To run the makona script through a slurm job: `sbatch sbatch-run-makona.sh`
-- Results are outputted to: `makona/_output` 
+- Results are outputted to: `makona-benchmark/_output` 
