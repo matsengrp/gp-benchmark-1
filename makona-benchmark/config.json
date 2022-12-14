@@ -17,15 +17,6 @@
         "max_iter": 100,
 	"track_intermediate_iterations": 0,
 	"use_gradients": 0
-    },
-    "pcspsurface": {
-	"steps": 0,
-	"hotstart": 0
-    },
-    "benchmark": {
-	"tol": 1e-4,
-	"max_iter": 100,
-	"use_gradients": 0
-    },
-    "benchmark_iters": 10
+	"mmap_path":"/loc/scratch/mmap.dat"
+    }
 }
