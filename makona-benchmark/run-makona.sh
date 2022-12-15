@@ -19,7 +19,7 @@ trap "rm -f $mmap" EXIT
 
 SECONDS=0
 
-gpb fit --config ../config.json ../_ignore/$TREES ../_ignore/$SEQS makona 
+gpb fit --config ../config.json ../_ignore/$TREES ../_ignore/$SEQS makona | tee makona-fit.log 
 
 duration=$SECONDS
 
