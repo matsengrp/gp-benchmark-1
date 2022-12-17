@@ -1,0 +1,10 @@
+{
+  "ds_number": 6,
+  "reroot_number": 6,
+  "reroot_name": "Candida_albicans_E15168",
+  "use_gradients": 0,
+  "intermediate": 0,
+  "hotstart": 0,
+  "steps": 0,
+  "benchmark_iters": 10
+}

@@ -1,0 +1,10 @@
+{
+  "ds_number": 1,
+  "reroot_number": 15,
+  "reroot_name": "Latimeria_chalumnae",
+  "use_gradients": 0,
+  "intermediate": 0,
+  "hotstart": 0,
+  "steps": 0,
+  "benchmark_iters": 10
+}

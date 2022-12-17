@@ -1,0 +1,11 @@
+
+execute ../data/DS1.n.nex;
+begin mrbayes;
+    set autoclose=yes nowarn=yes seed=42 swapseed=1337;
+    lset nst=1 rates=equal;
+    prset statefreqpr=fixed(equal) topologypr=uniform brlenspr=unconstrained:uniform(0,1);
+    mcmcp nruns=1 nchains=4 ngen=1000000000 samplefreq=1000 printfreq=10000 diagnfreq=10000 file=ds1 append=yes;
+    mcmc;
+    sump burnin=100000000;
+    sumt burnin=100000000;
+end;
