@@ -15,7 +15,7 @@
   - To run benchmark on all datasets: `conda activate bito && bash 0run-all-benchmark-golden.sh`
   - To run benchmark on all datasets through slurm job: `sbatch sbatch-run-all-golden.sh`
 - Results are outputted to: `ds-benchmark/_golden_benchmark-results/`
-- A copy of the results output is saved in the directory `manuscript_
+  - A copy of this results output is saved in the directory `manuscript_results/`
 #### VBPI Benchmarking
 - The VBPI benchmarking results is located: `ds-benchmark/vbpi-exp`
 - See the following repository for instructions on reproducing these results:
