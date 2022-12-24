@@ -1,9 +1,9 @@
 ## Perform Bito GP Golden Run Benchmarking:
 ### Prerequisites
 - Install bito  
-  - https://github.com/phylovi/bito.git 
+  - https://github.com/phylovi/bito
 - Install bito GP benchmark environment
-  - https://github.com/matsengrp/gp-benchmark-1-environment.git
+  - https://github.com/matsengrp/gp-benchmark-1-environment
 ### Run DS Benchmark
 #### MrBayes MCMC Posterior
 - The MrBayes scripts to produce the posterior samples for each dataset is found in `ds-benchmark/MrBayesScripts`
