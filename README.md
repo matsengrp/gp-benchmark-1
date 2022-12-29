@@ -4,12 +4,16 @@
   - https://github.com/phylovi/bito
 - Install bito GP benchmark environment
   - https://github.com/matsengrp/gp-benchmark-1-environment
+- Install Git Large File Storage (LFS) and retrieve DS test data files
+  - `conda install -c conda-forge git-lfs && git lfs install`
+  - `git lfs pull`
 ### Run DS Benchmark
 #### MrBayes MCMC Posterior
 - The MrBayes scripts to produce the posterior samples for each dataset is found in `ds-benchmark/MrBayesScripts`
   - There are two scripts used to sample from the posterior with either uniform or exponential prior on branch lengths.
   - To execute one of the scripts, such as with the uniform prior: `bash run-unif-ds.sh`
-- MrBayes specifications and the posterior tree samples are located in the respective dataset directories found in `ds-benchmark/` 
+- MrBayes specifications and the posterior tree samples are located in the respective dataset directories found in `ds-benchmark/`
+  - Git LFS is required to retrieve these data files.
 #### Generalized Pruning benchmarking
 - The GP benchmark script is located: `ds-benchmark/`
   - To run benchmark on all datasets: `conda activate bito && bash 0run-all-benchmark-golden.sh`
