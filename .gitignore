@@ -4,3 +4,10 @@
 __pycache__/
 _ignore*
 _output
+
+# benchmark results
+ds-benchmark/batch_log.out
+ds-benchmark/*_golden_benchmark_results/*
+ds-benchmark/ds*/_golden_benchmark_output/*
+ds*/*_output/*
+makona-benchmark/_output/*

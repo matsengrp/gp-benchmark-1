@@ -1,0 +1,22 @@
+{
+    "config_path": "config.json",
+    "nexus_alignment_path": "",
+    "output_prefix": "makona",
+    "nchains": 4,
+    "ngen": 10000000,
+    "burnin_frac": 0.1,
+    "samplefreq": 1000,
+    "printfreq": 10000,
+    "seed": 42,
+    "swapseed": 1337,
+    "reroot_number": 15,
+    "reroot_name": "EBOV___Gueckedou-C05___KJ660348___GIN___Gueckedou___2014-03-19",
+    "outside_nni_count": 500,
+    "fit": {
+        "tol": 1e-4,
+        "max_iter": 100,
+	"track_intermediate_iterations": 0,
+	"use_gradients": 0,
+	"mmap_path":"/loc/scratch/mmap.dat"
+    }
+}
