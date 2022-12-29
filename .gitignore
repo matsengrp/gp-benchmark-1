@@ -6,8 +6,7 @@ _ignore*
 _output
 
 # benchmark results
-correlation.csv
-benchmark/*_results/*
-benchmark/batch_log.out
+ds-benchmark/batch_log.out
+ds-benchmark/*_golden_benchmark_results/*
+ds-benchmark/ds*/_golden_benchmark_output/*
 ds*/*_output/*
-ds*/benchmark.json
