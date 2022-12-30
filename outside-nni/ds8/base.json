@@ -1,5 +1,10 @@
 {
-    "ds_number": 8,
-    "reroot_number": 4,
-    "reroot_name": "Ceratocystis_fimbriata"
+  "ds_number": 8,
+  "reroot_number": 4,
+  "reroot_name": "Ceratocystis_fimbriata",
+  "use_gradients": 0,
+  "intermediate": 0,
+  "hotstart": 0,
+  "steps": 0,
+  "benchmark_iters": 10
 }

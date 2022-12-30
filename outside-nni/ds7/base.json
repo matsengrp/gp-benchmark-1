@@ -1,5 +1,10 @@
 {
-    "ds_number": 7,
-    "reroot_number": 7,
-    "reroot_name": "Didelphis_virginiana"
+  "ds_number": 7,
+  "reroot_number": 7,
+  "reroot_name": "Didelphis_virginiana",
+  "use_gradients": 0,
+  "intermediate": 0,
+  "hotstart": 0,
+  "steps": 0,
+  "benchmark_iters": 10
 }
